@@ -25,11 +25,13 @@ The combined development mirror is:
 
 - https://github.com/xylophonez/lapee-bundler-devices-mirror/tree/feat/p4-compat
 
-Published `recharging-ledger@1.0` package used by `lapee-bundler-profile-recharging.json`:
+Published patched `recharging-ledger@1.0` package used by `lapee-bundler-profile-recharging.json`:
 
-- Spec ID: `mFnIcWlmBnyq8NMPQB3tIaqeoQJLNRcyoozEzGzE-a0`
-- Implementation ID: `arPd0tHsKdO1ODuypwxkgAtp7i5LQdw8yyQ6v9HBKVw`
-- Signer: `vZY2XY1RD9HIfWi8ift-1_DnHLDadZMWrufSh-_rKF0`
+- Source: https://github.com/permaweb/recharging-ledger/pull/1
+- Source commit: `63e0612bb4b8a9daeba00832588d5d4d3a4f0aa8`
+- Spec ID: `OnCecZpD33DV7kuf-WNw1hTNHAqb6u4IEKQ3Tc3Q6Eg`
+- Implementation ID: `MmzTVPVlgH0UPLAZW09JUH_dTWDwxgdqJgPZa8NTtlA`
+- Signer: `aYDOU6kEcE3lK7aA-gTmUKHTbLlQnZZXWpv1_i_Uq1U`
 
 Published updated `lapee-p4-bootstrap@1.0` package used by `lapee-bundler-profile-recharging.json`:
 
@@ -120,32 +122,33 @@ The current recharging profile was validated against a base no-TME LapEE image o
 
 - Profile: `lapee-bundler-profile-recharging.json`
 - Source image: `/home/fn/Dev/FWD/os/build/images/lapee-no-tme-source-20260629.img`
-- Profiled image: `/home/fn/Dev/FWD/os/build/images/lapee-no-tme-source-recharging-explicit-aopay-profile-20260630.img`
-- Proof artifacts: `/home/fn/Dev/FWD/os/build/qemu-p4-recharging-explicit-aopay-20260630`
+- Profiled image: `/home/fn/Dev/FWD/os/build/images/lapee-no-tme-source-recharging-pr1-profile-20260630.img`
+- Proof artifacts: `/home/fn/Dev/FWD/os/build/qemu-p4-recharging-pr1-20260630`
 
 Runtime profile evidence from `/~meta@1.0/info`:
 
 - `lapee-profile`: `aopayment-bundler-p4-recharging-waterfall`
 - `p4-ledger-device`: `recharging-ledger@1.0`
 - `load-remote-devices`: `true`
-- `ao-payment-ledger`: `tL36CFGHhDF3mF8VzPgSgYxGzm3I43XdiV2u78yEFQQ`
-- `ao-payment-deposit-address`: `uh0PNH2uha0F91cFwOLQt_EX-CwvBBnJymlHGPU8HN4`
+- `ao-payment-ledger`: `FbFrDZc5ZTN3UCY3r_cD1w9JlCYzmQeJCGNKwCjhwOQ`
+- `ao-payment-deposit-address`: `j8npaq8hRCZP21cBtMk-_JrchUbkWeB_ksaaYQxGJiw`
+- `~p4@1.0/balance?target=<sender>` after the first item returned `465701843`.
 
 QEMU waterfall proof summary:
 
-- Free/recharge item: `tHnxyRUUxLwktXvXMCGbpuZlkVR0i9VBNtDZbiATWw8`
-- Paid/fallback item: `3gJN1DeGNjFr8oydcjKJ4iZpC5_PM9LzD0iOCCfmmhw`
-- Free quote: `2540422550`
+- Free/recharge item: `JEBPzl8vRouENi5xLfliVgcLxE2DYuLzgJqXy3O924k`
+- Paid/fallback item: `dkACLtoynbbbU13Yen_Ni4pTHpYfuoRIgvMV851MTYE`
+- Free quote: `2534398694`
 - Recharge before: `3000000000`
-- Recharge after free item: `459587559`
-- Paid quote: `2540422550`
-- Payment message: `bXp3vo4uX4cS0M50d00RxGpRpKSCgo3s3Rr9HRw8hLg`
-- Payment slot: `2496025`
-- Payment quantity imported: `6080845100`
+- Recharge after free item: `465611254`
+- Paid quote: `2534398694`
+- Payment message: `hcn2wxUkFU7zM7hsOip6POqMaeWtcL5XhQ6J57BZtks`
+- Payment slot: `2496041`
+- Payment quantity imported: `6068797388`
 - Paid bundle status: `200`
-- Sender local ledger after ingest: `6080845100`
-- Sender local ledger after paid charge: `3540422550`
-- Ledger spent by fallback charge: `2540422550`
-- Beneficiary AO delta: `2540422550`
+- Sender local ledger after ingest: `6068797388`
+- Sender local ledger after paid charge: `3534398694`
+- Ledger spent by fallback charge: `2534398694`
+- Beneficiary AO delta: `2534398694`
 
 Earlier custom-overlay proof artifacts are retained at `/home/fn/Dev/FWD/os/build/qemu-p4-recharging-20260630`; they validated runtime behavior before the profile was corrected to explicitly pin every custom device for base LapEE.
