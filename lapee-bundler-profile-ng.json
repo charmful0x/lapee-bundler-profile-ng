@@ -1,0 +1,59 @@
+{
+  "lapee-profile": "aopayment-bundler-p4-native-baked-local",
+  "lapee-allow-request-trusted-ca": true,
+  "http-client-prefer-ipv4": true,
+  "load-remote-devices": false,
+  "trusted-device-signers": [],
+  "name-resolvers": [
+    {
+      "device": "arweave@2.9"
+    },
+    {
+      "device": "b32-name@1.0"
+    },
+    "G_gb7SAgogHMtmqycwaHaC6uC-CZ3akACdFv5PUaEE8~json@1.0/deserialize&target=data"
+  ],
+  "bundler-beneficiary": "kaYP9bJtpqON8Kyy3RbqnqdtDBDUsPTQTNUCvZtKiFI",
+  "simple-pay-price": 0,
+  "bundler-ans104": "https://up.arweave.net:443",
+  "ao-payment-ledger": "ledger",
+  "ao-payment-ledger-path": "/ledger~node-process@1.0",
+  "arweave-byte-price": "dynamic",
+  "bundler-premium": 0,
+  "bundler-free-byte-limit": 0,
+  "metering-rates": {
+    "beam-reductions": 0
+  },
+  "bundler-max-items": 1000,
+  "bundler-max-bundle-dispatch-delay": 2000,
+  "lapee-bundler-completed-item-retention-ms": 0,
+  "arweave-mempool-copycat-on-bundle-complete": true,
+  "arweave-mempool-progress": true,
+  "router-opts": {
+    "offered": [
+      {
+        "template": "/.*~process@1.0/.*",
+        "price": 0
+      },
+      {
+        "template": "/~bundler@1.0/tx",
+        "price": 0
+      },
+      {
+        "template": "/~bundler@1.0/item",
+        "price": 0
+      }
+    ]
+  },
+  "on": {
+    "start": {
+      "device": "lapee-p4-bootstrap@1.0"
+    },
+    "request": [
+      {
+        "device": "manifest@1.0"
+      }
+    ]
+  },
+  "trusted-devices": {}
+}
