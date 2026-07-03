@@ -14,10 +14,10 @@
       "arweave-byte-pricing@1.0": "LMByssb9jjrc2DUQOucor4t0Zni0JOViiY6PZmGgHRU",
       "bundler-settlement@1.0": "Nu-wM8Pdq4r6MTOKYFXnM6Jn0vAeGI732l-TsOcmazY",
       "lapee-bundler-gc@1.0": "obuc_4WtzF1vHZT17s3iV07O-qzgQuSAfmjECpehcYQ",
-      "lapee-p4-bootstrap@1.0": "RSQlLsmPZwwk7mxZuwMziGBFTMSTJT9OHm1xlq6MzrQ",
+      "lapee-p4-bootstrap@1.0": "xC0kc--Ata4MPzJDyKqLSfWGal5OC2NiAtw0y9ZNf7Q",
       "pricing-router@1.0": "UH8LNK2WMtgVBhQ6YCkk5dPyKbp3hHsb9pWCznVfYNA",
       "simple-oracle@1.0": "SGIOFvYoRKYIj3bC9_3Ggv2n0lNCOoSRrWJyHUrKeKg",
-      "recharging-ledger@1.0": "Sz1zPY3gPkHHw6V_9qsr1bsCBV2hjyUnWZh0TqIHk7M"
+      "recharging-ledger@1.0": "8IgceTuIV1BxIEtJeTX1WkTitAV4M-UhfC9brKm_sWE"
     },
     {
       "device": "arweave@2.9"
@@ -37,13 +37,15 @@
   "recharging-ledger-recharge": 34722,
   "recharging-ledger-period": 1,
   "recharging-ledger-grace": 124999200,
-  "recharging-ledger-fallback": {
-    "device": "ao-payment@1.0",
-    "ledger-path": "/ledger~node-process@1.0",
-    "auto-withdraw": true,
-    "withdraw-token": "0syT13r0s0tgPmIed95bJnuSqaD29HQNN8D3ElLSrsc",
-    "withdraw-recipient": "kaYP9bJtpqON8Kyy3RbqnqdtDBDUsPTQTNUCvZtKiFI"
-  },
+  "recharging-ledger-fallbacks": [
+    {
+      "device": "ao-payment@1.0",
+      "ledger-path": "/ledger~node-process@1.0",
+      "auto-withdraw": true,
+      "withdraw-token": "0syT13r0s0tgPmIed95bJnuSqaD29HQNN8D3ElLSrsc",
+      "withdraw-recipient": "kaYP9bJtpqON8Kyy3RbqnqdtDBDUsPTQTNUCvZtKiFI"
+    }
+  ],
   "arweave-byte-price": "dynamic",
   "bundler-premium": 0,
   "bundler-free-byte-limit": 0,
@@ -73,7 +75,7 @@
   },
   "on": {
     "start": {
-      "device": "RSQlLsmPZwwk7mxZuwMziGBFTMSTJT9OHm1xlq6MzrQ"
+      "device": "xC0kc--Ata4MPzJDyKqLSfWGal5OC2NiAtw0y9ZNf7Q"
     },
     "request": [
       {
@@ -90,13 +92,13 @@
     "Nu-wM8Pdq4r6MTOKYFXnM6Jn0vAeGI732l-TsOcmazY": "oeJGtUCutNdfszNuwGs0r7VW_inRhuFl_nDYraIRWjk",
     "lapee-bundler-gc@1.0": "AKXhtDqE_U7L275NMuZAqLvJm6rREgHajkfez1ugLTk",
     "obuc_4WtzF1vHZT17s3iV07O-qzgQuSAfmjECpehcYQ": "AKXhtDqE_U7L275NMuZAqLvJm6rREgHajkfez1ugLTk",
-    "lapee-p4-bootstrap@1.0": "0ER8jwnxByvfp0IXfgI1U_nypaq9x_Y0-NGbB68Ii0Y",
-    "RSQlLsmPZwwk7mxZuwMziGBFTMSTJT9OHm1xlq6MzrQ": "0ER8jwnxByvfp0IXfgI1U_nypaq9x_Y0-NGbB68Ii0Y",
+    "lapee-p4-bootstrap@1.0": "mR2aqX5udR7HiOexS3KDbURu59q7sjcJdYOXrxZkk0I",
+    "xC0kc--Ata4MPzJDyKqLSfWGal5OC2NiAtw0y9ZNf7Q": "mR2aqX5udR7HiOexS3KDbURu59q7sjcJdYOXrxZkk0I",
     "pricing-router@1.0": "e1T6L5u7dgj6nMkj3z7pUQjBrMWQdahm5xy5PV5tXOg",
     "UH8LNK2WMtgVBhQ6YCkk5dPyKbp3hHsb9pWCznVfYNA": "e1T6L5u7dgj6nMkj3z7pUQjBrMWQdahm5xy5PV5tXOg",
     "simple-oracle@1.0": "cEwxPCEk3WIYbWmeXOKlYsvLLBUKeB44P5F2y2FftaI",
     "SGIOFvYoRKYIj3bC9_3Ggv2n0lNCOoSRrWJyHUrKeKg": "cEwxPCEk3WIYbWmeXOKlYsvLLBUKeB44P5F2y2FftaI",
-    "recharging-ledger@1.0": "DFFf4jyGvBUkmrUl3-4vemg-wE_-jOoOIr3aLmezvBE",
-    "Sz1zPY3gPkHHw6V_9qsr1bsCBV2hjyUnWZh0TqIHk7M": "DFFf4jyGvBUkmrUl3-4vemg-wE_-jOoOIr3aLmezvBE"
+    "recharging-ledger@1.0": "PQWZKA08XGsvJE-Pt2cZ_X9hLgRLmeGu-dqfqLaE3vE",
+    "8IgceTuIV1BxIEtJeTX1WkTitAV4M-UhfC9brKm_sWE": "PQWZKA08XGsvJE-Pt2cZ_X9hLgRLmeGu-dqfqLaE3vE"
   }
 }
